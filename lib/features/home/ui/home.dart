@@ -94,28 +94,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-
-/*
-return Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.teal,
-            title: Text("Mini Mart"),
-            actions: [
-              IconButton(
-                onPressed: () {
-                  homeBloc.add(HomeWishListButtonNavigateEvent());
-                },
-                icon: Icon(Icons.favorite_border),
-              ),
-              IconButton(
-                onPressed: () {
-                  homeBloc.add(HomeCartButtonNavigateEvent());
-                },
-                icon: Icon(Icons.shopping_bag_outlined),
-              ),
-            ],
-          ),
-          body: Container(),
-        );
- */

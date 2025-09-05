@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:minimart/features/cart/bloc/cart_bloc.dart';
 import 'package:minimart/features/home/models/home_products_data.dart';
+import 'package:minimart/features/wishlist/bloc/wishlist_bloc.dart';
 
-class CartTileWidget extends StatelessWidget {
+class WishlistTileWidget extends StatelessWidget {
   final ProductDataModel productDataModel;
-  final CartBloc cartBloc;
+  final WishlistBloc wishlistBloc;
 
-  const CartTileWidget({
+  const WishlistTileWidget({
     super.key,
     required this.productDataModel,
-    required this.cartBloc,
+    required this.wishlistBloc,
   });
 
   @override
@@ -60,10 +60,8 @@ class CartTileWidget extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {
-                      cartBloc.add(
-                        CartRemoveFromCartEvent(
-                          productDataModel: productDataModel,
-                        ),
+                      wishlistBloc.add(
+                        WishlistRemoveEvent(productDataModel: productDataModel),
                       );
                     },
                     icon: Icon(Icons.shopping_bag),
